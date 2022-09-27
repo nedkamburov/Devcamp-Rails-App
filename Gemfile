@@ -30,6 +30,7 @@ gem "jbuilder"
 # Add permalinks to ActiveRecords [https://github.com/norman/friendly_id]
 gem 'friendly_id', '~> 5.4.0'
 
+gem 'devise', '~> 4.8', '>= 4.8.1'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
