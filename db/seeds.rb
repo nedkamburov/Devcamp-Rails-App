@@ -37,8 +37,8 @@ puts "5 skills created"
     title: "My portfolio no: #{portfolio}",
     subtitle: "Ruby on Rails #{portfolio}",
     body: "Description related to the portfolio",
-    main_image: "https://placeholder.com/600x400",
-    thumb_image: "https://placeholder.com/350x200"
+    main_image: "https://via.placeholder.com/600x400",
+    thumb_image: "https://via.placeholder.com/350x200"
   )
 end
 
@@ -46,8 +46,8 @@ Portfolio.create!(
   title: "My portfolio no: 8",
   subtitle: "Angular",
   body: "Description related to the portfolio",
-  main_image: "https://placeholder.com/600x400",
-  thumb_image: "https://placeholder.com/350x200"
+  main_image: "https://via.placeholder.com/600x400",
+  thumb_image: "https://via.placeholder.com/350x200"
 )
 
 puts "9 portfolio items created"
