@@ -1,6 +1,7 @@
 class Portfolio < ApplicationRecord
   include Placeholder
   validates :title, :subtitle, :body, :main_image, :thumb_image, presence: true
+  has_many :technologies
 
   # 2 ways to create custom scopes
   # Way 1
