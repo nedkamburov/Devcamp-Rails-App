@@ -2,6 +2,8 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates :title, :subtitle, :body, :main_image, :thumb_image, presence: true
   has_many :technologies
+  accepts_nested_attributes_for :technologies,
+                                reject_if: lambda { |attrs| attrs['name'].blank?}
 
   # 2 ways to create custom scopes
   # Way 1

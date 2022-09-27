@@ -1,6 +1,6 @@
 <h1>Create new portfolio</h1>
 
-<%= form_with(model: portfolio) do |form| %>
+<%= form_with(model: @portfolio_item) do |form| %>
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
@@ -15,6 +15,15 @@
     <%= form.label :body, style: "display: block" %>
     <%= form.text_area :body %>
   </div>
+
+  <ul>
+    <%= form.fields_for :technologies do |technology_form| %>
+    <li>
+      <%= technology_form.label :name %>
+      <%= technology_form.text_field :name %>
+    </li>
+    <% end %>
+  </ul>
 
   <div>
     <%= form.submit %>
