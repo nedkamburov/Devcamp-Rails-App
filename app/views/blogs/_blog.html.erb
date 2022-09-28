@@ -9,4 +9,10 @@
     <%= blog.body %>
   </p>
 
+  <p>Status: <%= link_to blog.status, toggle_status_blog_path(blog) %></p>
+  <p>
+    <%= link_to "Show this blog", blog %>
+  </p>
+  <p> <%= link_to "Delete", blog, data: {turbo_method: :delete,
+                                         turbo_confirm: 'Are you sure?'} %> </p>
 </div>

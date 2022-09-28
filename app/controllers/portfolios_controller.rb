@@ -47,7 +47,7 @@ class PortfoliosController < ApplicationController
       @portfolio_item.destroy
 
       respond_to do |format|
-        format.html { redirect_to blogs_url, notice: "Portfolio item was successfully destroyed." }
+        format.html { redirect_to portfolios_url, notice: "Portfolio item was successfully destroyed." }
       end
     end
   
