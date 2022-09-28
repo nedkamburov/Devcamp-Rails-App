@@ -7,7 +7,8 @@
     <%= csp_meta_tag %>
 
     <meta name="keywords" content="<%= @seo_keywords %>">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "blogs", "data-turbo-track": "reload" %>
     <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
     <%= javascript_importmap_tags %>
   </head>
@@ -23,6 +24,8 @@
     <%= link_to 'Register', new_user_registration_path %>
   <% end %>
 
+  <%= yield %>
+
   <header>
     <div><%= link_to "Home", root_path %></div>
     <div><%= link_to "About", about_path %></div>
@@ -31,8 +34,6 @@
     <div><%= link_to "Portfolio", portfolios_path %></div>
   </header>
 
-
-  <%= yield %>
   <% if session[:source] %>
     <footer>Thanks for visiting me from <%= session[:source] %></footer>
   <% end %>
