@@ -1,11 +1,11 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: %i[ show edit update destroy ]
     layout "portfolio"
     def index
       @portfolio_items = Portfolio.all
     end
 
-    def show 
-      @portfolio_item = Portfolio.find(params[:id])
+    def show
     end
 
     def new
@@ -25,14 +25,11 @@ class PortfoliosController < ApplicationController
       end
     end
 
-    def edit 
-      @portfolio_item = Portfolio.find(params[:id])
+    def edit
       3.times {@portfolio_item.technologies.build }
     end
 
-    def update  
-      @portfolio_item = Portfolio.find(params[:id])
-
+    def update
       respond_to do |format|
         if @portfolio_item.update(portfolio_params)
           format.html { redirect_to portfolios_path, notice: "Your portfolio item was successfully updated." }
@@ -42,8 +39,7 @@ class PortfoliosController < ApplicationController
       end
     end
 
-    def destroy  
-      @portfolio_item = Portfolio.find(params[:id])
+    def destroy
       @portfolio_item.destroy
 
       respond_to do |format|
@@ -58,5 +54,9 @@ class PortfoliosController < ApplicationController
                                         :body,
                                         technologies_attributes: [:name]
                                         )
+    end
+
+    def set_portfolio_item
+      @portfolio_item = Portfolio.find(params[:id])
     end
 end
