@@ -2,8 +2,11 @@
   <p><strong>Title: </strong><%= blog.title.upcase %></p>
   <span>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</span>
   <p><strong>Body: </strong><%= blog.body %></p>
-  <p>Status: <%= link_to blog.status, toggle_status_blog_path(blog) %></p>
-  <p><%= link_to "Show this blog", blog %></p>
-  <p> <%= link_to "Delete", blog, data: {turbo_method: :delete,
-                                         turbo_confirm: 'Are you sure?'} %> </p>
+  <% if logged_in?(:site_admin) %>
+    <p>Status: <%= link_to blog.status, toggle_status_blog_path(blog) %></p>
+  <% end %>
+  <p><%= link_to "Show", blog %></p>
+  <p><%= link_to "Edit", edit_blog_path(blog) if logged_in?(:site_admin) %></p>
+  <p> <%= link_to "Delete", blog,
+                  data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} if logged_in?(:site_admin)%> </p>
 </div>
