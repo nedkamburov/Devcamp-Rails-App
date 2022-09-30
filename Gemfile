@@ -36,6 +36,7 @@ gem 'bootstrap', '~> 5.2.1'
 
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 
+gem 'devcamp_view_tool', '~> 0.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -52,7 +53,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -73,3 +73,6 @@ group :development do
   # gem "spring"
 end
 
+gem "dartsass-rails", "~> 0.4.0"
+
+gem 'sassc-rails'
