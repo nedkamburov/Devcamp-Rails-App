@@ -3,7 +3,6 @@
  * Globals
  */
 
-
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -26,7 +25,6 @@
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-
 /*
  * Base structure
  */
@@ -40,7 +38,6 @@ body {
 .cover-container {
   max-width: 55em;
 }
-
 
 /*
  * Header
@@ -66,4 +63,17 @@ body {
 .nav-masthead .active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+/*
+* Custom Styles
+*/
+
+.card-block {
+  color: black;
+  text-align: left;
+}
+
+.auth-links a {
+  color: black;
 }
