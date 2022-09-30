@@ -12,15 +12,21 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
   <%= login_helper %>
 
-  <%= render "shared/nav", location: 'top' %>
+  <%= render "shared/application_nav" %>
 
   <%= yield %>
 
   <%= copyright_generator %>
   <%= source_helper('index') %>
+      <footer class="mt-auto text-white-50">
+        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+      </footer>
+      </div>
+  </div>
   </body>
 </html>
