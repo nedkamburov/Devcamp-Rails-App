@@ -12,21 +12,13 @@
   </head>
 
   <body>
-  <div class="d-flex h-100 text-center text-white bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-
-  <%= login_helper %>
-
-  <%= render "shared/application_nav" %>
-
-  <%= yield %>
-
-  <%= copyright_generator %>
-  <%= source_helper('index') %>
-      <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-      </footer>
+    <div class="d-flex h-100 text-center text-white bg-dark">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <%= render "shared/application_nav" %>
+        <%= yield %>
+        <%= source_helper('index') %>
+        <%= render "/shared/application_footer" %>
       </div>
-  </div>
+    </div>
   </body>
 </html>
