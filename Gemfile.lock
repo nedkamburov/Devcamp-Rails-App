@@ -95,6 +95,8 @@ GEM
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-sass (6.2.0)
+      sassc (~> 2.0)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     globalid (1.0.0)
@@ -128,8 +130,6 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
-    material_icons (2.2.1)
-      railties (>= 3.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.16.3)
@@ -244,11 +244,11 @@ DEPENDENCIES
   debug
   devcamp_view_tool (~> 0.1.0)
   devise (~> 4.8, >= 4.8.1)
+  font-awesome-sass (~> 6.2.0)
   friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder
   kaminari (~> 1.2, >= 1.2.2)
-  material_icons (~> 2.2)
   petergate (~> 1.6, >= 1.6.3)
   pg (~> 1.1)
   puma (~> 5.0)
