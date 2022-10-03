@@ -1,24 +1,4 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Devcamp-Rails-App
+A sample Ruby on Rails application
+A sample application similar to the Rails app from this Udemy tutorial: 
+[https://udemy.com/course/professional-rails-5-development-course](https://udemy.com/course/professional-rails-5-development-course)
