@@ -1,16 +1,25 @@
-<% if logged_in?(:site_admin) %>
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-             <%= link_to "Delete", portfolio_path(portfolio_item), data: {turbo_method: :delete,
-                                                turbo_confirm: 'Are you sure?'}  if logged_in?(:site_admin) %>
-            </button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">
-              <%= link_to "Edit", edit_portfolio_path(portfolio_item)  if logged_in?(:site_admin) %>
-            </button>
-          </div>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col md-7">
+      <%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+    </div>
+    <div class="col md-5">
+      <% if logged_in?(:site_admin) %>
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+              <%= link_to "Delete", portfolio_path(@portfolio_item), data: {turbo_method: :delete,
+                                                  turbo_confirm: 'Are you sure?'}  if logged_in?(:site_admin) %>
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">
+                <%= link_to "Edit", edit_portfolio_path(@portfolio_item)  if logged_in?(:site_admin) %>
+              </button>
+            </div>
+      <% end %>
+      <h1><%= @portfolio_item.title %></h1>
+      <h3><%= @portfolio_item.subtitle %></h3>
+      <p><%= @portfolio_item.body %></p>
+    </div>
+  </div>
+</div>
 
-<h1><%= @portfolio_item.title %></h1>
-<h3><%= @portfolio_item.subtitle %></h3>
-<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
-<p><%= @portfolio_item.body %></p>
+

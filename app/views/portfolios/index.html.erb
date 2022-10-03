@@ -1,6 +1,7 @@
-<%= link_to "Create new portfolio", new_portfolio_path  if logged_in?(:site_admin) %>
+
 <div class="album py-5 bg-light">
   <div class="container">
+    <%= link_to "Create new portfolio", new_portfolio_path  if logged_in?(:site_admin) %>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <%= render partial: 'portfolio_item', collection: @portfolio_items %>
     </div>
