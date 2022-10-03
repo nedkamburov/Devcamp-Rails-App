@@ -76,3 +76,6 @@ end
 gem "dartsass-rails", "~> 0.4.0"
 
 gem 'sassc-rails'
+
+gem 'material_icons', '~> 2.2'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
