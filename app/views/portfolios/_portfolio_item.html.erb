@@ -1,7 +1,20 @@
-<h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
-<p><%= portfolio_item.subtitle%></p>
-<p><%= portfolio_item.body%></p>
-<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
-<%= link_to "Edit", edit_portfolio_path(portfolio_item)  if logged_in?(:site_admin) %>
-<p> <%= link_to "Delete", portfolio_path(portfolio_item), data: {turbo_method: :delete,
-                                                turbo_confirm: 'Are you sure?'}  if logged_in?(:site_admin) %> </p>
+ <div class="col">
+    <div class="card shadow-sm">
+      <%= image_tag portfolio_item.thumb_image, class: "bd-placeholder-img card-img-top" unless portfolio_item.thumb_image.nil? %>
+      <div class="card-body">
+        <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
+        <span><%= portfolio_item.subtitle %></span>
+        <p class="card-text"> <%= portfolio_item.body %> </p>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">9 mins</small>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
