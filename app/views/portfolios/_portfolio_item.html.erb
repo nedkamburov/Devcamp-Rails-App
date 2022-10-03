@@ -2,12 +2,8 @@
     <div class="card shadow-sm">
       <%= image_tag portfolio_item.thumb_image, class: "bd-placeholder-img card-img-top" unless portfolio_item.thumb_image.nil? %>
       <div class="card-body">
-        <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
+        <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span>
         <span><%= portfolio_item.subtitle %></span>
-        <p class="card-text"> <%= portfolio_item.body %> </p>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">9 mins</small>
-        </div>
       </div>
     </div>
 </div>
