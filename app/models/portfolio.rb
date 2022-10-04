@@ -19,4 +19,6 @@ class Portfolio < ApplicationRecord
     self.main_image ||= Placeholder.image_generator(600, 400)
     self.thumb_image ||= Placeholder.image_generator(350, 200)
   end
+
+  scope :by_position, -> {order('position ASC')}
 end

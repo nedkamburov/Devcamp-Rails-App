@@ -95,8 +95,6 @@ GEM
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    font-awesome-sass (6.2.0)
-      sassc (~> 2.0)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     globalid (1.0.0)
@@ -244,7 +242,6 @@ DEPENDENCIES
   debug
   devcamp_view_tool (~> 0.1.0)
   devise (~> 4.8, >= 4.8.1)
-  font-awesome-sass (~> 6.2.0)
   friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder
