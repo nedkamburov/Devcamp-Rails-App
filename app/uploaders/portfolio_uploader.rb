@@ -5,7 +5,7 @@ class PortfolioUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   storage :aws
-  # storage :fog
+  # storage :file # If you want to store the images on the server
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
