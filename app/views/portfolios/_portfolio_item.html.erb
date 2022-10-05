@@ -1,7 +1,6 @@
  <div class="col" data-id="<%= portfolio_item.id %>">
     <div class="card shadow-sm">
-      <%= portfolio_item.thumb_image.file.nil?  %>
-      <%= image_tag portfolio_item.thumb_image_url, class: "bd-placeholder-img card-img-top" unless portfolio_item.thumb_image.file.nil? %>
+      <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), class: "bd-placeholder-img card-img-top" %>
       <div class="card-body">
         <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span>
         <span><%= portfolio_item.subtitle %></span>
