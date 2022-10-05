@@ -80,3 +80,11 @@ gem 'sassc-rails'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 gem "pry", "~> 0.14.1"
+
+gem "carrierwave", "~> 2.2"
+
+gem "mini_magick", "~> 4.11"
+
+gem "carrierwave-aws", "~> 1.5"
+
+gem "dotenv-rails", "~> 2.8"

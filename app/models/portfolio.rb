@@ -16,6 +16,9 @@ class Portfolio < ApplicationRecord
 
   after_initialize :set_defaults
 
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   def set_defaults
     self.main_image ||= Placeholder.image_generator(600, 400)
     self.thumb_image ||= Placeholder.image_generator(350, 200)
