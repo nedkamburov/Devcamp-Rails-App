@@ -78,3 +78,5 @@ gem "dartsass-rails", "~> 0.4.0"
 gem 'sassc-rails'
 
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
+gem "pry", "~> 0.14.1"

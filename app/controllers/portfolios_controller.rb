@@ -48,6 +48,14 @@ class PortfoliosController < ApplicationController
         format.html { redirect_to portfolios_url, notice: "Portfolio item was successfully destroyed." }
       end
     end
+
+    def sort
+      params[:order].each do |item|
+        Portfolio.find(item[:id]).update(position: item[:position])
+      end
+
+      head :ok # Make sure Rails doesn't look for a view
+  end
   
     private 
     def portfolio_params
